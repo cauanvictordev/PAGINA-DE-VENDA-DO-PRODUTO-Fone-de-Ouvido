@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fone de Ouvido Bluetooth</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Fone de Ouvido Bluetooth com Cancelamento de Ruído</h1>
+        <p class="subheading">Experiência de som incomparável para o seu dia a dia</p>
+    </header>
+
+    <section class="product-display">
+        <div class="image-gallery">
+            <img src="primeiro.jpg" alt="Fone de ouvido em destaque" class="product-image">
+            <div class="thumbnail-gallery">
+                <img src="primeiro.jpg" alt="Imagem 1 do fone de ouvido" class="thumbnail">
+                <img src="segundo.jpg" alt="Imagem 2 do fone de ouvido" class="thumbnail">
+                <img src="terceiro.jpg" alt="Imagem 3 do fone de ouvido" class="thumbnail">
+            </div>
+        </div>
+        <div class="product-details">
+            <h2>R$ 299,90</h2>
+            <p>Desfrute de um som claro e potente com o fone de ouvido Bluetooth com cancelamento de ruído ativo. Ideal para quem busca uma experiência auditiva imersiva.</p>
+            <ul>
+                <li><strong>Conexão Bluetooth:</strong> 5.0 para melhor alcance e estabilidade.</li>
+                <li><strong>Cancelamento de ruído:</strong> Tecnologia ANC para um som limpo.</li>
+                <li><strong>Bateria de longa duração:</strong> Até 20 horas de uso contínuo.</li>
+                <li><strong>Microfone integrado:</strong> Faça chamadas de alta qualidade.</li>
+            </ul>
+            <form id="orderForm" action="processa_pedido.php" method="POST">
+                <input type="text" name="nome" placeholder="Nome Completo" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="tel" name="telefone" placeholder="Telefone" required>
+                <button type="submit">Finalizar Compra</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="features">
+        <h3>Por que escolher nosso produto?</h3>
+        <div class="feature feature1">
+            <img src="primeiro.jpg" alt="Conforto e durabilidade">
+            <p>Design ergonômico e confortável para longas horas de uso.</p>
+        </div>
+        <div class="feature feature2">
+            <img src="segundo.jpg" alt="Cancelamento de Ruído">
+            <p>Cancelamento de ruído ativo para uma experiência mais imersiva.</p>
+        </div>
+        <div class="feature feature3">
+            <img src="terceiro.jpg" alt="Bateria de Longa Duração">
+            <p>Bateria de longa duração com até 20 horas de uso.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Loja de Fones. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #008080;
+    color: #ffffff;
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.header .subheading {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.product-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    animation: fadeInZoom 1s ease-out;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+}
+
+.product-details {
+    max-width: 500px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideInFromRight 1s ease-out;
+}
+
+.product-details h2 {
+    color: #008080;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.product-details p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-details ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-details li {
+    margin-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #008080;
+    color: #ffffff;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #006666;
+}
+
+.features {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #008080;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feature img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #008080;
+    transition: transform 0.3s ease;
+}
+
+.feature img:hover {
+    transform: scale(1.1);
+}
+
+.feature p {
+    max-width: 300px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Visibilidade ao rolar a página */
+.feature-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .product-display {
+        flex-direction: column;
+    }
+
+    .thumbnail-gallery {
+        justify-content: center;
+    }
+
+    .feature {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
